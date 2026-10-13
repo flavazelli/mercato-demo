@@ -29,4 +29,4 @@ export function MenuPage({ lang, t }: { lang: 'en' | 'fr'; t: Copy }) {
 }
 
 export function PageIntro({ title, text }: { title: string; text: string }) { return <section className="page-intro"><div className="container"><h1 className="serif">{title}</h1><p>{text}</p></div></section>; }
-export function FoodArt({ type, id, alt = '' }: { type: string; id?: string; alt?: string }) { return <div className={`food-art art-${type}`}><FoodPhoto type={type} id={id} alt={alt}/></div>; }
+export function FoodArt({ type, alt = '' }: { type: string; id?: string; alt?: string }) { return <div className={`food-art art-${type}`}><FoodPhoto type={type} alt={alt} generic /></div>; }
