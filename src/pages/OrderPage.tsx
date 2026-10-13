@@ -103,7 +103,7 @@ export function OrderPage({ lang, t }: { lang: 'en' | 'fr'; t: Copy }) {
               <h3>{lang === 'fr' ? item.frName : item.name}</h3>
               <p>{lang === 'fr' ? item.frDetails : item.details}</p>
               <div className="order-product-actions">
-                {cateringPrices[item.id].length > 1 && <label className="price-option-label">{lang === 'fr' ? 'Format' : 'Size'}<select value={priceOptionIds[item.id]} onChange={e => setPriceOptionIds(current => ({ ...current, [item.id]: e.target.value }))}>{cateringPrices[item.id].map(option => <option key={option.id} value={option.id}>{lang === 'fr' ? option.frLabel : option.label} · {currency.format(option.price)}</option>)}</select></label>}
+                {cateringPrices[item.id].length > 1 && <label className="price-option-label"><span className="price-option-heading"><span>{lang === 'fr' ? 'Format' : 'Size'}</span><b>{currency.format(selectedPrice(item.id).price)} <small>/ {lang === 'fr' ? selectedPrice(item.id).frUnit : selectedPrice(item.id).unit}</small></b></span><span className="price-select-wrap"><select aria-label={lang === 'fr' ? 'Choisir le format' : 'Choose a size'} value={priceOptionIds[item.id]} onChange={e => setPriceOptionIds(current => ({ ...current, [item.id]: e.target.value }))}>{cateringPrices[item.id].map(option => <option key={option.id} value={option.id}>{lang === 'fr' ? option.frLabel : option.label}</option>)}</select><span aria-hidden="true" /></span></label>}
                 <button className="add-button" onClick={() => addItem(item.id)}>{cart[item.id] ? `${t.order.added} · ${cart[item.id]}` : `+ ${t.order.add}`}</button>
               </div>
             </div>
