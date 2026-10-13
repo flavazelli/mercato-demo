@@ -1,0 +1,78 @@
+export type CateringCategory = 'Staff Lunch' | 'Pizza' | 'Sandwich Platters' | 'Deli & Cheese' | 'Trays & Pasta' | 'Salads & Sides' | 'Desserts & Coffee';
+export type CateringItem = { id: string; name: string; frName: string; category: CateringCategory; image: string; details: string; frDetails: string };
+export type CateringPriceOption = { id: string; label: string; frLabel: string; price: number; unit: string; frUnit: string; minQuantity?: number };
+
+// Transcribed from the user-provided Catering.pdf. Prices are displayed as listed;
+// for the staff lunch, the PDF indicates $21 per person with a minimum of 10.
+export const cateringCategories: CateringCategory[] = ['Staff Lunch', 'Pizza', 'Sandwich Platters', 'Deli & Cheese', 'Trays & Pasta', 'Salads & Sides', 'Desserts & Coffee'];
+export const cateringItems: CateringItem[] = [
+  { id: 'staff-lunch', name: 'Staff Lunch', frName: 'Repas du personnel', category: 'Staff Lunch', image: 'sandwich', details: 'Full-size sandwich on French or Nonna bread: breaded chicken, sausage or deli meat with provolone, lettuce and mayo. Includes a drink and dessert. $21 per person · minimum 10 people.', frDetails: 'Sandwich grand format sur pain français ou Nonna : poulet pané, saucisse ou charcuterie avec provolone, laitue et mayonnaise. Comprend une boisson et un dessert. 21 $ par personne · minimum de 10 personnes.' },
+  { id: 'pizza-red', name: 'Red Pizza Platter', frName: 'Pizza rouge', category: 'Pizza', image: 'pizza', details: 'Tomato sauce · $30 per whole pizza.', frDetails: 'Sauce tomate · 30 $ la pizza entière.' },
+  { id: 'pizza-white', name: 'White Pizza Platter', frName: 'Pizza blanche', category: 'Pizza', image: 'pizza', details: 'Oil and spices · $30 per whole pizza.', frDetails: 'Huile et épices · 30 $ la pizza entière.' },
+  { id: 'pizza-focaccia', name: 'Focaccia Pizza Platter', frName: 'Pizza focaccia', category: 'Pizza', image: 'pizza', details: 'Plum tomatoes and spices · $30 per whole pizza.', frDetails: 'Tomates prunes et épices · 30 $ la pizza entière.' },
+  { id: 'pizza-specialty', name: 'Specialty Pizza Platter', frName: 'Pizza garniture spéciale', category: 'Pizza', image: 'pizza', details: 'Choose olives, all dressed, potato and onion, sausage and rapini, or vegetarian · $38 per whole pizza.', frDetails: 'Au choix : olives, toute garnie, pommes de terre et oignons, saucisse et rapini ou végétarienne · 38 $ la pizza entière.' },
+  { id: 'sandwich-chicken', name: 'Chicken Cutlet Mini Paninis', frName: 'Mini paninis au poulet pané', category: 'Sandwich Platters', image: 'sandwich', details: 'Provolone and lettuce · $95 · serves 12 people.', frDetails: 'Provolone et laitue · 95 $ · 12 personnes.' },
+  { id: 'sandwich-cold-cuts', name: 'Cold Cuts Mini Paninis', frName: 'Mini paninis à la charcuterie', category: 'Sandwich Platters', image: 'sandwich', details: 'Salami, capicollo, provolone and lettuce · $85 · serves 12 people.', frDetails: 'Salami, capicollo, provolone et laitue · 85 $ · 12 personnes.' },
+  { id: 'sandwich-sausage', name: 'Sausage Mini Paninis', frName: 'Mini paninis à la saucisse', category: 'Sandwich Platters', image: 'sandwich', details: 'Provolone and lettuce · $95 · serves 12 people.', frDetails: 'Provolone et laitue · 95 $ · 12 personnes.' },
+  { id: 'deli-platter', name: 'Deli Meat Platter', frName: 'Plateau de charcuteries', category: 'Deli & Cheese', image: 'deli', details: 'Prosciutto, capicollo, mortadella, salami and turkey · $90 small / $125 large.', frDetails: 'Prosciutto, capicollo, mortadella, salami et dinde · 90 $ petit / 125 $ grand.' },
+  { id: 'cheese-platter', name: 'Cheese Platter', frName: 'Plateau de fromages', category: 'Deli & Cheese', image: 'market', details: 'Provolone, mozzarella, gouda, cheddar, asiago, mixed olives and taralli crisps · $100 small / $135 large.', frDetails: 'Provolone, mozzarella, gouda, cheddar, asiago, olives assorties et taralli · 100 $ petit / 135 $ grand.' },
+  { id: 'breaded-chicken-tray', name: 'Breaded Chicken Tray', frName: 'Plateau de poulet pané', category: 'Trays & Pasta', image: 'prepared', details: '$75 · serves 12 people.', frDetails: '75 $ · 12 personnes.' },
+  { id: 'roasted-potato-tray', name: 'Roasted Potato Tray', frName: 'Plateau de pommes de terre rôties', category: 'Trays & Pasta', image: 'prepared', details: '$55 · serves 12 people.', frDetails: '55 $ · 12 personnes.' },
+  { id: 'orecchiette-rapini-sausage', name: 'Orecchiette with Rapini and Sausage', frName: 'Orecchiette au rapini et à la saucisse', category: 'Trays & Pasta', image: 'prepared', details: '$65 for 10 people / $90 for 20 people.', frDetails: '65 $ pour 10 personnes / 90 $ pour 20 personnes.' },
+  { id: 'penne-pesto', name: 'Penne Pesto Tray', frName: 'Plateau de penne au pesto', category: 'Trays & Pasta', image: 'prepared', details: '$65 for 10 people / $90 for 20 people.', frDetails: '65 $ pour 10 personnes / 90 $ pour 20 personnes.' },
+  { id: 'penne-tomato', name: 'Penne with Tomato Sauce Tray', frName: 'Plateau de penne à la sauce tomate', category: 'Trays & Pasta', image: 'prepared', details: '$65 for 10 people / $90 for 20 people.', frDetails: '65 $ pour 10 personnes / 90 $ pour 20 personnes.' },
+  { id: 'lasagna-bolognese', name: 'Lasagna Bolognese Tray', frName: 'Plateau de lasagne bolognaise', category: 'Trays & Pasta', image: 'prepared', details: '$110 · serves 10–12 people.', frDetails: '110 $ · 10 à 12 personnes.' },
+  { id: 'tomato-bocconcini-salad', name: 'Tomato, Bocconcini and Cucumber Salad', frName: 'Salade de tomates, bocconcini et concombre', category: 'Salads & Sides', image: 'prepared', details: 'Olive oil and Italian spices · $75 · serves 12–15 people.', frDetails: 'Huile d’olive et épices italiennes · 75 $ · 12 à 15 personnes.' },
+  { id: 'mixed-green-salad', name: 'Mixed Green Salad', frName: 'Salade verte mélangée', category: 'Salads & Sides', image: 'prepared', details: 'Italian dressing · $55 · serves 12–15 people.', frDetails: 'Vinaigrette italienne · 55 $ · 12 à 15 personnes.' },
+  { id: 'caesar-salad', name: 'Caesar Salad', frName: 'Salade César', category: 'Salads & Sides', image: 'prepared', details: 'Caesar dressing · $70 · serves 12–15 people.', frDetails: 'Vinaigrette César · 70 $ · 12 à 15 personnes.' },
+  { id: 'arancini-prosciutto', name: 'Prosciutto and Mozzarella Mini Arancini', frName: 'Mini arancini au prosciutto et à la mozzarella', category: 'Salads & Sides', image: 'prepared', details: '$60 for 20 mini rice balls.', frDetails: '60 $ pour 20 mini boulettes de riz.' },
+  { id: 'arancini-classic', name: 'Classic Mini Arancini', frName: 'Mini arancini classiques', category: 'Salads & Sides', image: 'prepared', details: '$60 for 20 mini rice balls.', frDetails: '60 $ pour 20 mini boulettes de riz.' },
+  { id: 'arancini-spinach', name: 'Spinach and Parmigiano Mini Arancini', frName: 'Mini arancini aux épinards et au parmigiano', category: 'Salads & Sides', image: 'prepared', details: '$60 for 20 mini rice balls.', frDetails: '60 $ pour 20 mini boulettes de riz.' },
+  { id: 'stuffed-olives', name: 'Stuffed Olives', frName: 'Olives farcies', category: 'Salads & Sides', image: 'market', details: '$80 for 50 stuffed olives.', frDetails: '80 $ pour 50 olives farcies.' },
+  { id: 'grilled-vegetables', name: 'Grilled Vegetable Platter', frName: 'Plateau de légumes grillés', category: 'Salads & Sides', image: 'prepared', details: 'Zucchini, eggplant and peppers · $75 · serves 15 people.', frDetails: 'Courgettes, aubergines et poivrons · 75 $ · 15 personnes.' },
+  { id: 'seasonal-fruit', name: 'Seasonal Fruit Platter', frName: 'Plateau de fruits de saison', category: 'Salads & Sides', image: 'pastry', details: '$95.', frDetails: '95 $.' },
+  { id: 'mini-cannoli', name: 'Mini Cannoli', frName: 'Mini cannoli', category: 'Desserts & Coffee', image: 'pastry', details: 'Ricotta filling · $40 for 12 cannoli.', frDetails: 'Garniture à la ricotta · 40 $ pour 12 cannoli.' },
+  { id: 'mini-bomboloni', name: 'Mini Bomboloni', frName: 'Mini bomboloni', category: 'Desserts & Coffee', image: 'pastry', details: 'Custard filling · $30 for 12 bomboloni.', frDetails: 'Crème pâtissière · 30 $ pour 12 bomboloni.' },
+  { id: 'mini-brownies', name: 'Mini Brownies', frName: 'Mini brownies', category: 'Desserts & Coffee', image: 'pastry', details: '$40 for 12 brownies.', frDetails: '40 $ pour 12 brownies.' },
+  { id: 'ciambelline', name: 'Ciambelline', frName: 'Ciambelline', category: 'Desserts & Coffee', image: 'pastry', details: 'Mini doughnut holes · $55 for 100.', frDetails: 'Mini beignets · 55 $ pour 100.' },
+  { id: 'mini-lobster-tails', name: 'Mini Lobster Tails', frName: 'Mini queues de homard', category: 'Desserts & Coffee', image: 'pastry', details: 'Chantilly filling · $50 for 12.', frDetails: 'Garniture à la crème Chantilly · 50 $ pour 12.' },
+  { id: 'cakes', name: 'Cakes', frName: 'Gâteaux', category: 'Desserts & Coffee', image: 'pastry', details: 'Strawberry shortcake, Ferrero Rocher, cheesecake and more · $65 · serves 15–20 people.', frDetails: 'Gâteau aux fraises, Ferrero Rocher, gâteau au fromage et autres · 65 $ · 15 à 20 personnes.' },
+  { id: 'coffee-box', name: 'Coffee Box', frName: 'Boîte à café', category: 'Desserts & Coffee', image: 'coffee', details: 'Includes cups, sugar, milk and cream · $35 for 12 cups.', frDetails: 'Comprend tasses, sucre, lait et crème · 35 $ pour 12 tasses.' },
+];
+
+// Structured amounts used by the order calculator. Tiered prices remain distinct
+// options so the cart can calculate an accurate subtotal for the selected size.
+export const cateringPrices: Record<string, CateringPriceOption[]> = {
+  'staff-lunch': [{ id: 'person', label: 'Per person (10-person minimum)', frLabel: 'Par personne (minimum 10 personnes)', price: 21, unit: 'person', frUnit: 'personne', minQuantity: 10 }],
+  'pizza-red': [{ id: 'whole', label: 'Whole pizza', frLabel: 'Pizza entière', price: 30, unit: 'pizza', frUnit: 'pizza' }],
+  'pizza-white': [{ id: 'whole', label: 'Whole pizza', frLabel: 'Pizza entière', price: 30, unit: 'pizza', frUnit: 'pizza' }],
+  'pizza-focaccia': [{ id: 'whole', label: 'Whole pizza', frLabel: 'Pizza entière', price: 30, unit: 'pizza', frUnit: 'pizza' }],
+  'pizza-specialty': [{ id: 'whole', label: 'Whole pizza', frLabel: 'Pizza entière', price: 38, unit: 'pizza', frUnit: 'pizza' }],
+  'sandwich-chicken': [{ id: 'platter', label: 'Platter', frLabel: 'Plateau', price: 95, unit: 'platter', frUnit: 'plateau' }],
+  'sandwich-cold-cuts': [{ id: 'platter', label: 'Platter', frLabel: 'Plateau', price: 85, unit: 'platter', frUnit: 'plateau' }],
+  'sandwich-sausage': [{ id: 'platter', label: 'Platter', frLabel: 'Plateau', price: 95, unit: 'platter', frUnit: 'plateau' }],
+  'deli-platter': [{ id: 'small', label: 'Small', frLabel: 'Petit', price: 90, unit: 'platter', frUnit: 'plateau' }, { id: 'large', label: 'Large', frLabel: 'Grand', price: 125, unit: 'platter', frUnit: 'plateau' }],
+  'cheese-platter': [{ id: 'small', label: 'Small', frLabel: 'Petit', price: 100, unit: 'platter', frUnit: 'plateau' }, { id: 'large', label: 'Large', frLabel: 'Grand', price: 135, unit: 'platter', frUnit: 'plateau' }],
+  'breaded-chicken-tray': [{ id: 'tray', label: 'Tray', frLabel: 'Plateau', price: 75, unit: 'tray', frUnit: 'plateau' }],
+  'roasted-potato-tray': [{ id: 'tray', label: 'Tray', frLabel: 'Plateau', price: 55, unit: 'tray', frUnit: 'plateau' }],
+  'orecchiette-rapini-sausage': [{ id: '10', label: 'Serves 10', frLabel: '10 personnes', price: 65, unit: 'tray', frUnit: 'plateau' }, { id: '20', label: 'Serves 20', frLabel: '20 personnes', price: 90, unit: 'tray', frUnit: 'plateau' }],
+  'penne-pesto': [{ id: '10', label: 'Serves 10', frLabel: '10 personnes', price: 65, unit: 'tray', frUnit: 'plateau' }, { id: '20', label: 'Serves 20', frLabel: '20 personnes', price: 90, unit: 'tray', frUnit: 'plateau' }],
+  'penne-tomato': [{ id: '10', label: 'Serves 10', frLabel: '10 personnes', price: 65, unit: 'tray', frUnit: 'plateau' }, { id: '20', label: 'Serves 20', frLabel: '20 personnes', price: 90, unit: 'tray', frUnit: 'plateau' }],
+  'lasagna-bolognese': [{ id: 'tray', label: 'Tray', frLabel: 'Plateau', price: 110, unit: 'tray', frUnit: 'plateau' }],
+  'tomato-bocconcini-salad': [{ id: 'bowl', label: 'Bowl', frLabel: 'Bol', price: 75, unit: 'bowl', frUnit: 'bol' }],
+  'mixed-green-salad': [{ id: 'bowl', label: 'Bowl', frLabel: 'Bol', price: 55, unit: 'bowl', frUnit: 'bol' }],
+  'caesar-salad': [{ id: 'bowl', label: 'Bowl', frLabel: 'Bol', price: 70, unit: 'bowl', frUnit: 'bol' }],
+  'arancini-prosciutto': [{ id: '20', label: '20 pieces', frLabel: '20 morceaux', price: 60, unit: 'platter', frUnit: 'plateau' }],
+  'arancini-classic': [{ id: '20', label: '20 pieces', frLabel: '20 morceaux', price: 60, unit: 'platter', frUnit: 'plateau' }],
+  'arancini-spinach': [{ id: '20', label: '20 pieces', frLabel: '20 morceaux', price: 60, unit: 'platter', frUnit: 'plateau' }],
+  'stuffed-olives': [{ id: '50', label: '50 olives', frLabel: '50 olives', price: 80, unit: 'platter', frUnit: 'plateau' }],
+  'grilled-vegetables': [{ id: 'platter', label: 'Platter', frLabel: 'Plateau', price: 75, unit: 'platter', frUnit: 'plateau' }],
+  'seasonal-fruit': [{ id: 'platter', label: 'Platter', frLabel: 'Plateau', price: 95, unit: 'platter', frUnit: 'plateau' }],
+  'mini-cannoli': [{ id: '12', label: '12 pieces', frLabel: '12 morceaux', price: 40, unit: 'box', frUnit: 'boîte' }],
+  'mini-bomboloni': [{ id: '12', label: '12 pieces', frLabel: '12 morceaux', price: 30, unit: 'box', frUnit: 'boîte' }],
+  'mini-brownies': [{ id: '12', label: '12 pieces', frLabel: '12 morceaux', price: 40, unit: 'box', frUnit: 'boîte' }],
+  ciambelline: [{ id: '100', label: '100 pieces', frLabel: '100 morceaux', price: 55, unit: 'box', frUnit: 'boîte' }],
+  'mini-lobster-tails': [{ id: '12', label: '12 pieces', frLabel: '12 morceaux', price: 50, unit: 'box', frUnit: 'boîte' }],
+  cakes: [{ id: 'cake', label: 'Cake (serves 15–20)', frLabel: 'Gâteau (15 à 20 personnes)', price: 65, unit: 'cake', frUnit: 'gâteau' }],
+  'coffee-box': [{ id: '12', label: '12 cups', frLabel: '12 tasses', price: 35, unit: 'box', frUnit: 'boîte' }],
+};
