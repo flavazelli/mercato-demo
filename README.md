@@ -1,6 +1,6 @@
-# Mercato Montagna Concept
+# Mercato Montagna
 
-A bilingual static website prototype for Mercato Montagna, built with React, TypeScript and Vite. Menu prices and products used in ordering are illustrative; forms and checkout are frontend demonstrations only.
+A bilingual website for Mercato Montagna, built with React, TypeScript and Vite. The menu and catering prices are maintained in the project data files.
 
 ## Requirements
 
@@ -44,11 +44,11 @@ npm run preview
 
 ## Replacing images
 
-Replace `src/assets/images/market.svg` with approved Mercato photography and update the imports in `src/pages/HomePage.tsx`. Food illustration styles are in `src/styles/site.css`. Files in `public/images` can be referenced with root-relative paths. The prototype does not hotlink image hosts.
+Replace `src/assets/images/market.svg` with approved Mercato photography and update the imports in `src/pages/HomePage.tsx`. Food illustration styles are in `src/styles/site.css`. Files in `public/images` can be referenced with root-relative paths. The site does not hotlink image hosts.
 
 ## Updating menu items
 
-Edit `src/data/menu.ts`. Menu names, descriptions, categories, sample prices and image style keys are centralized there. Replace the sample prices and confirm availability with the business before using ordering commercially.
+Edit `src/data/menu.ts` to update menu names, descriptions, categories, prices and image style keys.
 
 ## Updating business details
 

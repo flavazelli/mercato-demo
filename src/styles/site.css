@@ -49,3 +49,6 @@
 .pickup-schedule select{width:100%;min-width:0;height:40px;padding:7px 9px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font:12px var(--sans)}.pickup-schedule select:disabled{color:var(--muted);opacity:.8}
 .pickup-time-note{color:var(--muted);font-size:10px;line-height:1.4}
 .pickup-time-control{position:relative;display:block}.pickup-time-control select{appearance:none;-webkit-appearance:none;width:100%;min-width:0;height:40px;padding:7px 34px 7px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font:12px var(--sans)}.pickup-time-control>span{position:absolute;right:11px;top:50%;transform:translateY(-58%);color:var(--muted);font-size:18px;line-height:1;pointer-events:none}.pickup-time-control select:disabled{color:var(--muted);opacity:.8}
+
+.contact-cta-card{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 18px;border:1px solid #ffffff35}.contact-ctas h2{font:500 24px/1.2 var(--serif);margin:0 0 7px}.contact-cta-card p{max-width:330px;margin:0;color:#e0e5de;font-size:11px;line-height:1.6}.contact-cta-card .button{flex:0 0 auto}
+@media(max-width:760px){.contact-cta-card{align-items:flex-start;flex-direction:column}.contact-cta-card .button{width:100%}}
